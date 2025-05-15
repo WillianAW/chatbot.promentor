@@ -1,0 +1,163 @@
+"Quero comprar um apartamento de 2 quartos no Batel com varanda gourmet e vaga de garagem"
+
+"Estou procurando uma casa térrea no Santa Felicidade com 3 quartos, jardim e piscina até R$ 1,2 milhão"
+
+"Gostaria de adquirir um sobrado novo no Cabral com 4 suítes, área de churrasco e elevador social"
+
+"Busco kitnet mobiliado no Centro Cívico próximo ao metrô, até R$ 250 mil, com lavanderia compartilhada"
+
+"Quero comprar casa de condomínio no Alto da XV com quintal amplo, garagem para 3 carros e sistema de segurança"
+
+Aluguel + Tipo + Local + Preço
+"Procuro alugar apartamento de 70m² no Água Verde com 2 quartos e varanda, até R$ 3.500/mês"
+
+"Quero alugar casa geminada no Portão com 3 dormitórios, sendo 1 suíte, máximo R$ 4.000"
+
+"Busco flat para aluguel no Bigorrilho mobiliado, com academia no prédio, até R$ 2.800"
+
+"Gostaria de alugar cobertura duplex no Cristo Rei com vista panorâmica, até R$ 7.500 mensais"
+
+"Procuro alugar sobrado no Juvevê com 4 quartos e área de serviço externa, até R$ 5.200"
+
+Venda + Tipo + Características Específicas
+"Vendo apartamento alto padrão no Batel com 3 suítes, hidromassagem e varanda de 20m²"
+
+"Preciso vender casa colonial no Hugo Lange com 5 dormitórios, biblioteca e piscina térmica"
+
+"Vendo kitnet no Centro mobiliado, 35m², com armários planejados e portaria 24h"
+
+"Anuncio terreno residencial no Hauer de 400m², plano inclinado, pronto para construção"
+
+"Vendo casa container no Cajuru com 2 quartos, energia solar e acabamento premium"
+
+Investimento + Local + Tipo
+"Quero investir em apartamentos para Airbnb no Batel, de 1 dormitório, com mobília moderna"
+
+"Busco imóvel comercial no Centro para revenda, loja com estoque e fluxo intenso"
+
+"Procuro terreno no Boqueirão para construção de prédio, mínimo 600m², regularizado"
+
+"Gostaria de investir em flats estudantis próximo à PUCPR, com bom retorno financeiro"
+
+"Quero comprar galpão logístico na CIC, mínimo 1.000m², com doca e alto pé-direito"
+
+Combinações Complexas
+"Alugo apartamento no Batel com 2 quartos, sendo 1 suíte, varanda gourmet, R$ 3.800, aceito pets"
+
+"Vendo casa no Santa Felicidade, 450m², 5 quartos, piscina, sauna, R$ 2,9 milhões, permuta por menor"
+
+"Compro sobrado no Cabral com 3 dormitórios, garagem coberta, até R$ 1,5 milhão, preferência com elevador"
+
+"Investidor busca prédio comercial no Centro, 6 andares, renda atual R$ 35 mil/mês, para aquisição à vista"
+
+"Alugo cobertura no Água Verde, 180m², 3 suítes, vista desimpedida, R$ 9.500, contrato mínimo 2 anos"
+
+Casos Específicos
+"Quero apartamento para idosos no Batel, 2 quartos, acessibilidade comprovada, até R$ 800 mil"
+
+"Procuro casa para temporada no litoral (se aplicável), 4 quartos, mobiliada, aceito até R$ 15 mil/mês no verão"
+
+"Vendo imóvel comercial na Rua XV, 120m², 2 banheiros, excelente localização, ideal para consultório"
+
+"Busco terreno industrial na região metropolitana, mínimo 2.000m², com infraestrutura elétrica"
+
+"Alugo sala comercial no Centro, 50m², reformada, R$ 2.200, incluindo condomínio e IPTU"
+
+Adicionando Condições Especiais
+"Quero comprar apartamento no Batel com lazer completo, mínimo 2 vagas, aceito financiamento"
+
+"Vendo casa no Ahú com 3 quartos, garagem, precisa de reformas, valor abaixo do mercado"
+
+"Alugo imóvel para médico no Juvevê, mobiliado, com escritório, aceito fiador ou seguro fiança"
+
+"Investidor procura kitnets no Centro para conversão em Airbnb, pagamento à vista"
+
+"Compro casa popular no Tatuquara, até R$ 250 mil, documentação regularizada"
+
+Combinações com Múltiplos Critérios
+"Quero apartamento no Alto da Glória, 2 quartos, varanda, vaga, até R$ 1 milhão, pronta entrega"
+
+"Vendo sobrado no Mercês, 350m², 4 suítes, piscina, aceito carro como parte do pagamento"
+
+"Alugo casa no Hugo Lange para temporada de 6 meses, mobiliada, jardim, R$ 6.500/mês"
+
+"Busco terreno no Santa Felicidade para construção, mínimo 600m², plano regularizado"
+
+"Investidor procura prédios antigos no Centro para retrofit, pagamento em dólar"
+
+Casos de Teste Desafiadores
+"Se eu quiser comprar um apartamento de 3 quartos no Batel com varanda e piscina, qual seria a faixa de preço?"
+
+"Para alugar uma casa no Santa Felicidade com 4 quartos e piscina, quais documentos são necessários?"
+
+"Se eu tiver R$ 800 mil para investir, quais são as melhores opções de imóveis comerciais no Centro?"
+
+"Como funciona o processo para vender uma casa no Ahú com 3 quartos que precisa de reformas?"
+
+"Quais os imóveis disponíveis para compra no Portão que aceitam financiamento pelo Minha Casa Minha Vida?"
+
+Padrões Diversificados
+"Preciso de um apartamento para alugar no Batel com 1 quarto, aceito até R$ 2.500, tem alguma opção?"
+
+"Quanto custa em média uma casa com 3 quartos e piscina no Santa Felicidade para compra?"
+
+"Tem sobrado novo no Cabral com 4 suítes e área gourmet para venda? Qual o preço?"
+
+"Quero investir em imóveis para aluguel, quais os melhores bairros com retorno acima de 0,8% ao mês?"
+
+"Como faço para vender rapidamente um apartamento de 2 quartos no Centro que está desocupado?"
+
+Adicionando Contexto Temporal
+"Preciso alugar um apartamento no Água Verde até o final do mês, 2 quartos, até R$ 3.000"
+
+"Quero comprar casa no Batel ainda este ano, orçamento R$ 1,5 milhão, como devo proceder?"
+
+"Vendo apartamento no Cristo Rei com urgência, 3 quartos, 2 vagas, aceito propostas esta semana"
+
+"Tem previsão de lançamento de novos apartamentos no Bigorrilho para o próximo trimestre?"
+
+"Quero alugar casa para as férias de julho no litoral, 1 mês, 4 quartos, até R$ 15 mil"
+
+Testando Reconhecimento de Entidades
+"Apartamento 3 quartos Batel garagem preço" (formato telegráfico)
+
+"casa santa felicidade 4 quartos piscina venda" (minimizando palavras)
+
+"quero comprar AP no agua verde 2 quartos ate 1.2M" (abreviações)
+
+"alugar sobrado cabral 3 suítes 5k mes" (formato numérico alternativo)
+
+"investir imoveis centro retorno 1% mes" (objetivo específico)
+
+Perguntas com Comparativos
+"Qual é melhor para investimento: kitnet no Centro ou apartamento de 2 quartos no Batel?"
+
+"Entre casas no Santa Felicidade e sobrados no Cabral, qual tem melhor valorização?"
+
+"Comparando aluguel de apartamentos no Água Verde e Batel, onde o retorno é maior?"
+
+"Para família com 2 filhos: casa no Portão ou apartamento no Batel?"
+
+"O que é mais vantajoso financeiramente: comprar imóvel para morar ou para alugar?"
+
+Testando Processamento de Linguagem Natural
+"Me mostre opções de casas espaçosas no Santa Felicidade com quintal e garagem"
+
+"Quais são os imóveis mais baratos no Centro que possuem pelo menos 2 quartos?"
+
+"	"
+
+"Poderia listar propriedades no Água Verde que tenham sido reformadas recentemente?"
+
+"Há alguma casa no Alto da XV com piscina que esteja abaixo do valor de mercado?"
+
+Casos Reais Complexos
+"Sou divorciada buscando apartamento seguro no Batel, 2 quartos, até R$ 1 milhão, fácil financiamento"
+
+"Aposentado procura casa sem escadas no Portão, 2 quartos, jardim, até R$ 800 mil"
+
+"Empresário estrangeiro busca cobertura no Água Verde mobiliada, 3 quartos, vista, orçamento ilimitado"
+
+"Família com 3 crianças precisa de casa no Santa Felicidade, 5 quartos, perto de escolas, até R$ 2,5 mi"
+
+"Investidor de SP busca 10 kitnets no Centro para Airbnb, pagamento à vista, necessidade imediata"
