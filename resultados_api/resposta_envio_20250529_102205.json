@@ -1,0 +1,4 @@
+{
+    "status_code": 200,
+    "response": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/assets/images/evolution-logo.png\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Evolution Manager</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-Do1bGWiz.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DNOCacL_.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n"
+}

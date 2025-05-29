@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from typing import List
-from app.modelo import PerfilCliente, PerfilMultiploInteresse
+# from app.modelo import PerfilCliente, PerfilMultiploInteresse
 from app.chatbot import chain
 
 def verificar_clareza_mensagem(mensagem: str, limite_confianca: float = 0.7) -> bool:

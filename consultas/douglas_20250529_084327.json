@@ -1,0 +1,15 @@
+{
+  "nome": "Douglas",
+  "email": "",
+  "interesses": [
+    {
+      "nome": "Douglas",
+      "tipo_imovel": "apartamento",
+      "operacao": "compra",
+      "valor": "300 mil",
+      "localizacao": "santa felicidade",
+      "caracteristicas": "3 quartos"
+    }
+  ],
+  "data_consulta": "29/05/2025 08:43"
+}

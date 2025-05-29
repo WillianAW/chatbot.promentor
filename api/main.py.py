@@ -1,46 +1,126 @@
 import requests
+import json
+from pathlib import Path
 
-API_URL="http://evolution.promentor.com.br/manager"
-INSTANCE="exemplo_imob"
-API_KEY="7BD01546CC1C-4E9D-A015-09F58B329717"
 
-url = f"{API_URL}/message/sendText/{INSTANCE}"
+#https://evolution.promentor.com.br/message/typebot/start/sendText/exemplo_imob
 
-headers={
+API_URL_BASE = "https://evolution.promentor.com.br/message"
+API_URL_MANAGER = "http://evolution.promentor.com.br/manager"
+
+
+INSTANCE = "exemplo_imob"
+API_KEY = "7BD01546CC1C-4E9D-A015-09F58B329717"
+
+
+HEADERS = {
     "apikey": API_KEY,
     "Content-Type": "application/json"
 }
 
-body={
-    "number":"5541996612239",
-    "text":"Teste"
-}
+# Função para consultar status da instância
 
 
-try:
-    response = requests.post(url, headers=headers, json=body)
+def consultar_status_instancia():
+    url = f"{API_URL_MANAGER}/sendText/{INSTANCE}"
+    try:
+        response = requests.get(url, headers=HEADERS)
+        dados = response.json()
+        print("Status da instância:", dados)
 
-    print(f"Status Code: {response.status_code}")
+        salvar_json(dados, "status_instancia")
+        return dados
+    except Exception as e:
+        erro = {"status_code": response.status_code, "response": response.text, "erro": str(e)}
+        print("Erro na consulta:", erro)
+        salvar_json(erro, "status_instancia_erro")
+        return erro
 
-    if response.status_code == 200:
-        print("Conexão bem-sucedida! Instância encontrada.")
-        
-        if response.text.strip() == "":
-            print("Resposta vazia no corpo.")
-        else:
-            try:
-                data = response.json()
-                print("Resposta JSON:", data)
-            except ValueError:
-                print("A resposta não está em formato JSON.")
-                print("Resposta bruta:", response.text)
 
-    elif response.status_code == 401:
-        print("Erro 401: API Key inválida ou não autorizada.")
-    elif response.status_code == 404:
-        print("Erro 404: Instância não encontrada.")
-    else:
-        print(f"Erro {response.status_code}: {response.text}")
+#Função para obter informações gerais da instância ----------------------------------------------------------------obter instancia api
+def obter_informacoes_instancia():
+    url = f"{API_URL_MANAGER}/instanceStatus"
+    try:
+        response = requests.get(url, headers=HEADERS)
+        dados = response.json()
+        print("Informações da instância:", dados)
 
-except Exception as e:
-    print(f"Erro na conexão: {str(e)}")
+        salvar_json(dados, "informacoes_instancia")
+        return dados
+    except Exception as e:
+        erro = {"status_code": response.status_code, "response": response.text, "erro": str(e)}
+        print("Erro na consulta:", erro)
+        salvar_json(erro, "informacoes_instancia_erro")
+        return erro
+
+# ----------------------------------------------------------------------------------------------------------------------def enviar mensagem
+def enviar_mensagem(numero: str, mensagem: str):
+    url = f"{API_URL_BASE}/typebot/start/sendText/{INSTANCE}"
+
+    payload = {
+        "number": numero, 
+        "textMessage": mensagem
+    }
+
+    try:
+        response = requests.post(url, headers=HEADERS, json=payload)
+        dados = response.json()
+        print(" Mensagem enviada:", dados)
+
+        salvar_json(dados, "envio_mensagem")
+        return dados
+    except Exception as e:
+        erro = {
+            "status_code": response.status_code,
+            "response": response.text,
+            "erro": str(e)
+        }
+        print("Erro no envio:", erro)
+        salvar_json(erro, "envio_mensagem_erro")
+        return erro
+
+
+
+def enviar_mensagem(numero_destino: str, mensagem: str):
+    url = f"{API_URL_BASE}/typebot/start/sendText/{INSTANCE}"
+
+    payload = {
+        "number": numero_destino,
+        "text": mensagem
+    }
+
+    try:
+        response = requests.post(url, headers=HEADERS, json=payload)
+        dados = response.json()
+        print("✅ Mensagem enviada:", dados)
+
+        salvar_json(dados, f"envio_mensagem_{numero_destino}")
+        return dados
+    except Exception as e:
+        erro = {"status_code": response.status_code, "response": response.text, "erro": str(e)}
+        print("Erro no envio da mensagem:", erro)
+        salvar_json(erro, f"envio_mensagem_erro_{numero_destino}")
+        return erro   
+
+
+def salvar_json(dados: dict, nome_arquivo: str):
+    Path("resultados_api").mkdir(exist_ok=True)
+    caminho = f"resultados_api/{nome_arquivo}.json"
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=4)
+    print(f"Dados salvos em: {caminho}")
+
+
+if __name__ == "__main__":
+    status = consultar_status_instancia()
+    info = obter_informacoes_instancia()
+
+     # 
+    numero = "5541996612239"  
+    mensagem = "Ola, mensagem de teste via entrada API Evolution!"
+
+    enviar_mensagem(numero, mensagem)
+
+    print("\nConsulta concluída!")
+
+

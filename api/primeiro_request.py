@@ -1,6 +1,6 @@
 import requests 
 
-url="https://httpbin.org/post"
+url="www.google.com.br"
 
 resposta = requests.POST(url)
 
