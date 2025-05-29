@@ -1,31 +1,34 @@
-from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import JsonOutputParser
-from app.prompts import prompt
-from dotenv import load_dotenv
-import os
+from app.config_llm import chain
+from fastapi import APIRouter, Body
+from pydantic import BaseModel
 
-load_dotenv()
-parser = JsonOutputParser()
+router = APIRouter()
 
-# 🔑 Instancia o modelo da OpenAI
-llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
-# 🔗 Cria o pipeline (prompt → modelo → parser)
-chain = prompt | llm | parser
+class Mensagem(BaseModel):
+    mensagem: str
+
+@router.post("/conversa/")
+def conversar(msg: Mensagem):
+    resultado = classificar_mensagem(msg.mensagem)
+
+    resposta = f"✔️ Entendi que você quer {resultado.get('operacao', 'não informado')} um {resultado.get('tipo_imovel', 'não informado')} na região de {resultado.get('localizacao', 'não informado')} com características {resultado.get('caracteristicas', 'não informado')} e valor {resultado.get('valor', 'não informado')}."
+
+    return {
+        "resposta": resposta,
+        "dados_classificados": resultado
+    }
 
 def classificar_mensagem(mensagem: str) -> dict:
     try:
         resultado = chain.invoke({"mensagem": mensagem})
-        # Corrige campos que vieram como None
-        resultado_corrigido = {k: (v if v is not None else "") for k, v in resultado.items()}
-        return resultado_corrigido
-    except Exception as e:
-        print("⚠️ Erro ao classificar a mensagem:", e)
         return {
-            "tipo_imovel": "",
-            "operacao": "",
-            "valor": "",
-            "caracteristicas": "",
-            "localizacao": ""
+            "tipo_imovel": resultado.get("tipo_imovel", ""),
+            "operacao": resultado.get("operacao", ""),
+            "valor": resultado.get("valor", ""),
+            "caracteristicas": resultado.get("caracteristicas", ""),
+            "localizacao": resultado.get("localizacao", "")
         }
-
+    except Exception as e:
+        print(f"Erro na classificação: {e}")
+        return {}

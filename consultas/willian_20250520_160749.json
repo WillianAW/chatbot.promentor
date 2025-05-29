@@ -1,0 +1,23 @@
+{
+  "nome": "Willian",
+  "email": "",
+  "interesses": [
+    {
+      "tipo_imovel": "casa",
+      "operacao": "comprar",
+      "valor": "300 mil",
+      "caracteristicas": "2 quartos e vista coberta",
+      "localizacao": "santa felicidade",
+      "email": ""
+    },
+    {
+      "tipo_imovel": "apartamento",
+      "operacao": "alugar",
+      "valor": "200 mil",
+      "caracteristicas": "1 quarto",
+      "localizacao": "",
+      "email": ""
+    }
+  ],
+  "data_consulta": "20/05/2025 16:05"
+}

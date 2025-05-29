@@ -1,6 +1,6 @@
-langchain-core
+fastapi
+uvicorn
+langchain
 langchain-openai
 python-dotenv
 pydantic
-fastapi
-uvicorn

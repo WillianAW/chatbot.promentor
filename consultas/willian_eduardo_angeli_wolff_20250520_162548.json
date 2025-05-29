@@ -1,0 +1,15 @@
+{
+  "nome": "Willian Eduardo Angeli Wolff",
+  "email": "willian@email.com",
+  "interesses": [
+    {
+      "nome": "Willian Eduardo Angeli Wolff",
+      "tipo_imovel": "apartamento",
+      "operacao": "comprar",
+      "valor": "200 mil",
+      "localizacao": "cic",
+      "caracteristicas": "3 quartos"
+    }
+  ],
+  "data_consulta": "20/05/2025 16:17"
+}
